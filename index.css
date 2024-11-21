@@ -463,19 +463,6 @@
     border-radius: 50%;
     display: inline-block;
 }
-
-/* .instagram {
-    background-color: #F7EACB; 
-}
-
-.facebook {
-    background-color: #A7BCD5;
-}
-
-.twitter {
-    background-color: #7697B5; 
-} */
-
 .social-labels {
     display: flex;
     justify-content: space-around;
