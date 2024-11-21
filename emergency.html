@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Ambulance Service</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0; /* Light gray background */
+      color: #333; /* Dark gray text */
+    }
+
+    header {
+      background-color: #ffffff; /* White header */
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #d9d9d9;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      color: #333; /* Dark gray heading */
+      font-size: 28px;
+      font-weight: bold;
+    }
+    nav a {
+      margin: 0 15px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    nav a:hover {
+      color: #929292; /
+    }
+    main {
+      padding: 30px 20px;
+    }
+
+    .info-section {
+      background-color: #ffffff;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .info-section h2 {
+      font-size: 22px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .info-section p {
+      margin: 10px 0;
+      font-size: 16px;
+      color: #555; /* Medium gray text */
+    }
+
+    .pattern-line {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      margin-top: 15px;
+    }
+
+    .pattern-line span {
+      width: 20px;
+      height: 20px;
+      background-color: #d9d9d9;
+      border-radius: 50%;
+      transition: background-color 0.5s ease;
+    }
+
+    .pattern-line span.active {
+      background-color: #555; /* Active pattern color */
+    }
+    
+    button {
+      padding: 10px 20px;
+      background-color: #555; /* Medium gray button */
+      color: #fff; /* White text */
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #333; /* Dark gray on hover */
+    }
+
+    .action-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+  /* Footer */
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #5d5d5d; 
+    border-top: 2px solid #ffffff; 
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-image {
+    width: 120px; 
+    height: 40px; 
+    margin-bottom: 5px; 
+}
+
+.footer-center {
+    text-align: center;
+    flex: 1; 
+    padding: 0 20px; 
+}
+
+.footer-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px; 
+}
+
+.social-icon {
+    width: 30px; 
+    height: 30px; 
+    transition: transform 0.3s; /* Smooth effect */
+}
+
+.social-icon:hover {
+    transform: scale(1.1); 
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Emergency Ambulance Service</h1>
+  </header>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="contactus.html">Contact Us</a>
+  </nav>
+
+  <main>
+    <div class="info-section">
+      <h2>Locate You in Real-Time</h2>
+      <p>We need access to your location to estimate the ambulance's arrival time.</p>
+      <button id="getLocationBtn">Share Location</button>
+    </div>
+    <div class="info-section" id="statusSection" style="display: none;">
+      <h2>Status</h2>
+      <p id="statusMessage">Calculating your location...</p>
+      <p id="timer">Estimated Arrival Time: <span id="timeRemaining"></span></p>
+      <div class="pattern-line" id="patternLine"></div>
+      <div class="action-buttons">
+        <button id="callDriverBtn">Call Driver</button>
+        <button id="contactHospitalBtn">Contact Hospital</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-left">
+        <div class="footer-logo">
+            <img src="img.png" alt="Company Logo" class="logo-image">
+        </div>
+    </div>
+    <div class="footer-center">
+        <p>xyz.</p>
+        <p>Call us - +91 1234567890.
+        Mail us- xys@gmail.com</p>
+        <p>&copy; 20XX 'Companyname'. All rights reserved.</p>
+    </div>
+    <div class="footer-right">
+        <ul class="social-links">
+            <li><a href="https://www.facebook.com" target="_blank"><img src="fb.png" class="social-icon" alt="Facebook"></a></li>
+            <li><a href="https://www.twitter.com" target="_blank"><img src="x.png" class="social-icon" alt="Twitter"></a></li>
+            <li><a href="https://www.instagram.com" target="_blank"><img src="ig.png" class="social-icon" alt="Instagram"></a></li>
+        </ul>
+    </div>
+</footer>  
+
+  <script>
+    const getLocationBtn = document.getElementById("getLocationBtn");
+    const statusSection = document.getElementById("statusSection");
+    const statusMessage = document.getElementById("statusMessage");
+    const timer = document.getElementById("timer");
+    const timeRemaining = document.getElementById("timeRemaining");
+    const patternLine = document.getElementById("patternLine");
+    const callDriverBtn = document.getElementById("callDriverBtn");
+    const contactHospitalBtn = document.getElementById("contactHospitalBtn");
+
+    let interval;
+
+    getLocationBtn.addEventListener("click", () => {
+      if (navigator.geolocation) {
+        statusSection.style.display = "block";
+        statusMessage.textContent = "Requesting location permission...";
+        timer.style.display = "none";
+
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const { latitude, longitude } = position.coords;
+            statusMessage.textContent = `Location detected: Latitude ${latitude.toFixed(2)}, Longitude ${longitude.toFixed(2)}.`;
+            timer.style.display = "block";
+
+            let loadingTime = Math.floor(Math.random() * 10) + 5; // Random time between 5 to 15 minutes
+            timeRemaining.textContent = `${loadingTime} minutes`;
+
+            patternLine.innerHTML = "";
+            for (let i = 0; i < loadingTime; i++) {
+              const dot = document.createElement("span");
+              dot.classList.add("dot");
+              patternLine.appendChild(dot);
+            }
+
+            interval = setInterval(() => {
+              if (loadingTime > 0) {
+                const dots = document.querySelectorAll(".pattern-line span");
+                dots[dots.length - loadingTime].classList.add("active");
+                loadingTime--;
+                timeRemaining.textContent = `${loadingTime} minutes`;
+              } else {
+                clearInterval(interval);
+                statusMessage.textContent = "The ambulance has reached your location!";
+                timeRemaining.textContent = "Arrived!";
+              }
+            }, 1000);
+          },
+          (error) => {
+            statusMessage.textContent = "Unable to retrieve location. Please check permissions.";
+          }
+        );
+      } else {
+        alert("Geolocation is not supported by your browser.");
+      }
+    });
+
+    callDriverBtn.addEventListener("click", () => {
+      alert("Calling the driver now...");
+    });
+
+    contactHospitalBtn.addEventListener("click", () => {
+      alert("Connecting you to the hospital...");
+    });
+  </script>
+</body>
+</html>

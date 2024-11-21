@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Luminary Care</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #2c3e50;
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .logo img {
+            width: 180px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        nav li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            border-bottom: 2px solid #f39c12;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('about-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            text-align: center;
+            color: white;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            font-weight: 300;
+        }
+
+        /* About Us Section */
+        .about-us {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #ecf0f1;
+        }
+
+        .about-us h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .about-us p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #7f8c8d;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .about-us .highlight {
+            font-weight: bold;
+            color: #f39c12;
+        }
+
+        /* Mission Section */
+        .mission {
+            background-color: #f39c12;
+            color: white;
+            padding: 60px 20px;
+        }
+
+        .mission h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .mission p {
+            font-size: 18px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        /* Our Values Section */
+        .values {
+            padding: 60px 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .values h3 {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .values ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .values li {
+            font-size: 18px;
+            margin: 15px 0;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        /* Team Section */
+        .team {
+            background-color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .team h3 {
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        .team-members {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .team-member {
+            background-color: #f0f0f0;
+            width: 250px;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .team-member h4 {
+            font-size: 20px;
+            color: #2c3e50;
+        }
+
+        .team-member p {
+            font-size: 16px;
+            color: #7f8c8d;
+        }
+
+        /* Newsletter Section */
+        .newsletter-section {
+            padding: 60px 20px;
+            background-color: #ecf0f1;
+            text-align: center;
+        }
+
+        .newsletter-section h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .newsletter-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .newsletter-card {
+            background-color: #ffffff;
+            width: 300px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .newsletter-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .newsletter-card h4 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .newsletter-card p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #7f8c8d;
+        }
+
+        .newsletter-card form input[type="email"] {
+            padding: 10px;
+            width: 80%;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        .newsletter-card form button {
+            padding: 10px 20px;
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .newsletter-card form button:hover {
+            background-color: #e67e22;
+        }
+
+        /* Footer */
+        footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #5d5d5d; 
+        border-top: 2px solid #ffffff; 
+        }
+
+        .footer-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo-image {
+            width: 120px; 
+            height: 40px; 
+            margin-bottom: 5px; 
+        }
+
+        .footer-center {
+            text-align: center;
+            flex: 1; 
+            padding: 0 20px; 
+        }
+
+        .footer-right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px; 
+        }
+
+        .social-icon {
+            width: 30px; 
+            height: 30px; 
+            transition: transform 0.3s; /* Smooth effect */
+        }
+
+        .social-icon:hover {
+            transform: scale(1.1); 
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            .team-members {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .team-member {
+                width: 80%;
+                margin: 10px 0;
+            }
+
+            .newsletter-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .newsletter-card {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="luminary_logo.png" alt="Luminary Care Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>About Luminary Care</h1>
+            <h2>Our mission is to provide world-class healthcare with care, compassion, and dedication.</h2>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="about-us">
+            <h2>Who We Are</h2>
+            <p>
+                Luminary Care is a leading healthcare provider dedicated to improving the quality of life for individuals and communities. 
+                Established with the goal of making high-quality healthcare accessible and affordable, we are here to provide compassionate care
+                and innovative medical services to people of all backgrounds.
+            </p>
+            <p>
+                Our team of skilled medical professionals, support staff, and specialists work together to create a patient-first environment
+                where healing and well-being are the primary focus. <span class="highlight">We believe in treating not just the illness, but the person as a whole.</span>
+            </p>
+            <p>
+                At Luminary Care, we strive for excellence in everything we do. From our advanced medical technology to our compassionate patient
+                care, we are committed to making healthcare better, safer, and more accessible for everyone.
+            </p>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="mission">
+            <h3>Our Mission</h3>
+            <p>
+                Our mission is simple yet powerful: to provide comprehensive, compassionate care to improve the health and well-being of our patients.
+                We aim to empower individuals by promoting preventive care, innovative treatments, and lifelong health education.
+            </p>
+        </section>
+
+        <!-- Our Values Section -->
+        <section class="values">
+            <h3>Our Core Values</h3>
+            <ul>
+                <li>Integrity: Upholding the highest standards of professionalism and ethical practice.</li>
+                <li>Compassion: Offering empathetic care to every individual we serve.</li>
+                <li>Excellence: Striving for the best results through continuous improvement and innovation.</li>
+                <li>Innovation: Embracing advanced technology to enhance patient care.</li>
+                <li>Collaboration: Working together as a unified team to achieve the best patient outcomes.</li>
+            </ul>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team">
+            <h3>Meet Our Team</h3>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="doctor1.jpg" alt="Dr. John Doe">
+                    <h4>Dr. John Doe</h4>
+                    <p>Chief Medical Officer</p>
+                </div>
+                <div class="team-member">
+                    <img src="doctor2.jpg" alt="Dr. Jane Smith">
+                    <h4>Dr. Jane Smith</h4>
+                    <p>Head of Pediatrics</p>
+                </div>
+                <div class="team-member">
+                    <img src="doctor3.jpg" alt="Dr. Mike Lee">
+                    <h4>Dr. Mike Lee</h4>
+                    <p>Consultant Cardiologist</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <h3>Subscribe to Our Newsletter</h3>
+            <div class="newsletter-cards">
+                <div class="newsletter-card">
+                    <h4>Healthcare Updates</h4>
+                    <p>Stay informed with the latest healthcare trends and news from our experts.</p>
+                    <form>
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+                <div class="newsletter-card">
+                    <h4>Wellness Tips</h4>
+                    <p>Get regular tips on maintaining a healthy lifestyle directly to your inbox.</p>
+                    <form>
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+                <div class="newsletter-card">
+                    <h4>Health Events</h4>
+                    <p>Be the first to know about upcoming health workshops and seminars.</p>
+                    <form>
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <div class="footer-logo">
+                <img src="img.png" alt="Company Logo" class="logo-image">
+            </div>
+        </div>
+        <div class="footer-center">
+            <p>xyz.</p>
+            <p>Call us - +91 1234567890.
+            Mail us- xys@gmail.com</p>
+            <p>&copy; 20XX 'Companyname'. All rights reserved.</p>
+        </div>
+        <div class="footer-right">
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com" target="_blank"><img src="fb.png" class="social-icon" alt="Facebook"></a></li>
+                <li><a href="https://www.twitter.com" target="_blank"><img src="x.png" class="social-icon" alt="Twitter"></a></li>
+                <li><a href="https://www.instagram.com" target="_blank"><img src="ig.png" class="social-icon" alt="Instagram"></a></li>
+            </ul>
+        </div>
+    </footer> 
+</body>
+</html>

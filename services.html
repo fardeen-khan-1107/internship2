@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Services Platform</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fafafa; 
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    /* Header Section */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ffffff; /* White header */
+      padding: 15px 20px;
+      border-bottom: 2px solid #d9d9d9;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #000000; 
+    }
+
+    .emergency {
+      display: flex;
+      align-items: center;
+      background-color:#474747; 
+      padding: 10px 20px;
+      border-radius: 25px;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .emergency img {
+      margin-left: 8px;
+      width: 28px;
+      height: 28px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    nav a:hover {
+      color: #929292; /
+    }
+
+    /* Main Content */
+    main {
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    /* Quick Services Section */
+    .quick-services, .faqs, .partners, .comments {
+      background-color: #ffffff; /* White cards */
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    .quick-services h2, .faqs h2, .comments h2 {
+      text-align: center;
+      font-size: 24px;
+      color: #ffffff; 
+      margin-bottom: 20px;
+    }
+
+    .quick-services table {
+      width: 100%;
+      border-spacing: 0;
+    }
+
+    .quick-services td {
+      padding: 12px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .quick-services td:last-child {
+      text-align: right;
+    }
+
+    .quick-services td:last-child button {
+      padding: 10px 20px;
+      border: none;
+      background-color:#474747; 
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .quick-services td:last-child button:hover {
+      background-color: #929292;
+    }
+
+   /* FAQs Section */
+   .faqs {
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    .faqs h2 {
+      text-align: center;
+      font-size: 24px;
+      color: #000000;
+      margin-bottom: 20px;
+    }
+
+    .faq-item {
+      margin-bottom: 15px;
+      padding: 15px;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      background-color: #f7f9fc;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .faq-item:hover {
+      background-color: #e6f7ff;
+    }
+
+    .faq-item span {
+      display: none; /* Initially hidden */
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #474747;
+    }
+
+    .faq-item.open span {
+      display: block; /* Display answer when open */
+    }
+
+    .add-question {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #f7f9fc;
+      border-radius: 10px;
+      border: 1px solid #e0e0e0;
+    }
+
+    .add-question input {
+      width: calc(98% - 100px);
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-right: 10px;
+    }
+
+    .add-question button {
+      padding: 10px 20px;
+      background-color: #474747;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .add-question button:hover {
+      background-color: #474747;
+    }
+
+    /* Partners Section */
+    .partners h2 {
+      text-align: center;
+    }
+
+    .partners img {
+      width: 100px;
+      height: auto;
+      margin: 10px;
+    }
+
+    .partners .partner-logos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    /* Comments Section */
+    .comments textarea {
+      width: 100%;
+      height: 120px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      resize: none;
+    }
+
+    .comments button {
+      margin-top: 10px;
+      padding: 12px 20px;
+      border: none;
+      background-color: #474747; 
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .comments button:hover {
+      background-color: #474747; 
+    }
+
+    /* Footer */
+    footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #5d5d5d; 
+    border-top: 2px solid #ffffff; 
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-image {
+    width: 120px; 
+    height: 40px; 
+    margin-bottom: 5px; 
+}
+
+.footer-center {
+    text-align: center;
+    flex: 1; 
+    padding: 0 20px; 
+}
+
+.footer-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px; 
+}
+
+.social-icon {
+    width: 30px; 
+    height: 30px; 
+    transition: transform 0.3s; /* Smooth effect */
+}
+
+.social-icon:hover {
+    transform: scale(1.1); 
+}
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Quick Services</div>
+  <div class="emergency">
+    Emergency Call <img src="img.png" alt="Emergency Icon">
+  </div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">Contact Us</a>
+  </nav>
+</header>
+
+<main>
+  <!-- Quick Services Section -->
+  <section class="quick-services">
+    <h2>Quick Services</h2>
+    <table>
+      <tr>
+        <td>Book Appointment</td>
+        <td><button>Go</button></td>
+      </tr>
+      <tr>
+        <td>Lab Test</td>
+        <td><button>Go</button></td>
+      </tr>
+      <tr>
+        <td>Consult Doctor</td>
+        <td><button>Go</button></td>
+      </tr>
+      <tr>
+        <td>Download Reports</td>
+        <td><button>Go</button></td>
+      </tr>
+    </table>
+  </section>
+
+ <!-- FAQs Section -->
+ <section class="faqs">
+    <h2>FAQs</h2>
+    <div class="faq-item">
+      What is the process to book an appointment?
+      <span>You can book an appointment using our online platform or contact us via phone.</span>
+    </div>
+    <div class="faq-item">
+      How do I download my reports?
+      <span>Login to your patient portal, navigate to the 'Reports' section, and click 'Download'.</span>
+    </div>
+    <div class="faq-item">
+      Can I consult a doctor online?
+      <span>Yes, we offer teleconsultation services. Schedule a virtual appointment on our website.</span>
+    </div>
+
+    <!-- Add Question Section -->
+    <div class="add-question">
+      <h3>Add Your Question</h3>
+      <input type="text" id="newQuestion" placeholder="Type your question here...">
+      <button onclick="addQuestion()">Add</button>
+    </div>
+  </section>
+
+  <!-- Partners Section -->
+  <section class="partners">
+    <h2>Our Partners</h2>
+    <div class="partner-logos">
+      <img src="img.png" alt="Partner 1">
+      <img src="img.png" alt="Partner 2">
+      <img src="img.png" alt="Partner 3">
+      <img src="img.png" alt="Partner 4">
+      <img src="img.png" alt="Partner 5">
+    </div>
+  </section>
+
+  <!-- Comments Section -->
+  <section class="comments">
+    <h2>Share Your Feedback</h2>
+    <textarea placeholder="Write your comment here..."></textarea>
+    <button>Submit</button>
+  </section>
+</main>
+
+<script>
+   // Toggle FAQ answers
+   const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('open');
+    });
+  });
+
+  // Add a new FAQ question
+  function addQuestion() {
+    const questionInput = document.getElementById('newQuestion');
+    const questionText = questionInput.value.trim();
+
+    if (questionText) {
+      // Create a new FAQ item
+      const newFaqItem = document.createElement('div');
+      newFaqItem.className = 'faq-item';
+      newFaqItem.innerHTML = `${questionText}<span>Answer not provided yet.</span>`;
+
+      // Add event listener for toggle functionality
+      newFaqItem.addEventListener('click', () => {
+        newFaqItem.classList.toggle('open');
+      });
+
+      // Append the new FAQ item to the list
+      const faqSection = document.querySelector('.faqs');
+      faqSection.insertBefore(newFaqItem, faqSection.querySelector('.add-question'));
+
+      // Clear the input field
+      questionInput.value = '';
+    } else {
+      alert('Please enter a question before adding.');
+    }
+  }
+</script>
+<footer>
+    <div class="footer-left">
+        <div class="footer-logo">
+            <img src="img.png" alt="Company Logo" class="logo-image">
+        </div>
+    </div>
+    <div class="footer-center">
+        <p>xyz.</p>
+        <p>Call us - +91 1234567890.
+        Mail us- xys@gmail.com</p>
+        <p>&copy; 20XX 'Companyname'. All rights reserved.</p>
+    </div>
+    <div class="footer-right">
+        <ul class="social-links">
+            <li><a href="https://www.facebook.com" target="_blank"><img src="fb.png" class="social-icon" alt="Facebook"></a></li>
+            <li><a href="https://www.twitter.com" target="_blank"><img src="x.png" class="social-icon" alt="Twitter"></a></li>
+            <li><a href="https://www.instagram.com" target="_blank"><img src="ig.png" class="social-icon" alt="Instagram"></a></li>
+        </ul>
+    </div>
+</footer>  
+
+</body>
+</html>
