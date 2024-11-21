@@ -1,0 +1,481 @@
+    body {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background-color: #EDE9CF;
+    font-family: Arial, sans-serif;
+}
+.header {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 10px 20px;
+}
+.logo {
+    display: flex;
+    align-items: center; 
+}
+.logo img {
+    width: 100px;
+    height: auto; 
+}
+.nav_items{
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+.nav_items ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.nav_items li{
+    list-style-type: none;
+}
+.book_now {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 0 10px;
+}
+.book_now button {
+    padding: 10px 15px; 
+    background-color: #4CAF50; 
+    color: white; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; 
+}
+.book_now button:hover {
+    background-color: #45a049; 
+}
+.Hero_Section{
+    height: auto;
+    display: flex;
+    margin: 100px 50px; 
+}
+.hero_text{
+    width: 50%;
+    height: auto;
+    margin: 50px 40px;
+}
+.hero_title{
+    font-size: 3rem;
+}
+.hero_sub-title{
+    font-size: 15px;
+}
+.hero_button{
+    width: 130px;
+    display: flex;
+    margin: 30px 0px;
+    padding: 0px 20px;
+    gap: 10px;
+    border-radius: 20px;
+    background-color: #23384F;
+    color: white;
+}
+.hero_btn{
+    display: flex;
+    gap: 10px;
+}
+.hero_btn img{
+    width: 20px;
+}
+.hero_image{
+    width: 50%;
+    display: flex;
+    justify-content: end;
+}
+.hero_image img{
+    width: 600px;
+}
+.clinical_img{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+/* Cards Section */
+.cards_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 50px;
+    background:#8EACCD;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 220px;
+    height: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.icon img{
+    margin-bottom: 15px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+.description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.explore {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #293949;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.explore:hover {
+    background-color: #1f2a35;
+}
+
+.neurosurgeon {
+    /* border: 2px solid #3ba4d8; */
+}
+.product_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 50px;
+    padding: 0px;
+    border-radius: 15px;
+}
+
+.our_product_text {
+    width: 50%;
+}
+
+.our_product_text h2 {
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.our_product_text h3 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+
+.why_our_products h2{
+    font-size: 19px;
+}
+
+.product_subtitle{
+    display: flex;
+    color: #555;
+    gap: 20px;
+    font-size: 14px;
+    padding: 10px 0px;
+}
+
+
+.book_button {
+    margin:30px 0px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    font:bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book_button:hover {
+    background-color: #45a049;
+}
+
+.product_images {
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    width: 50%;
+}
+
+.image1 img {
+    width: 100%; 
+    max-width: 500px; 
+    border-radius: 10px;
+}
+
+
+.emergency_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c5d9e3;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%; 
+    max-width: 1300px;
+    margin: 0 auto; 
+}
+
+.emergency_subsection {
+    display: flex;
+    justify-content: space-between; 
+    gap: 20px; 
+    width: 100%;
+    max-width: 800px;
+    align-items: center;
+}
+
+.emergency_card, .timetable_card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    text-align: center;
+}
+
+.emergency_card:hover, .timetable_card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.message_button, .timetable_button {
+    padding: 10px 20px;
+    background-color: #2b4452;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.message_button:hover, .timetable_button:hover {
+    background-color: #183138;
+}
+
+.timetable_button span {
+    margin-left: 10px;
+}
+
+
+.appointment_section {
+    background-color: #f1e8d8;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.appointment_container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    background-color: #c5d9e3;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.appointment_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.appointment_image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.appointment_form {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #a4d3d8;
+}
+
+.appointment_form h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.appointment_form p {
+    width: 500px;
+    margin-bottom: 50px;
+    font-size: 14px;
+    color: #333;
+}
+
+.form_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.form_grid input {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    outline-color: #2b4452;
+    border: none;
+}
+
+.book_button {
+    padding: 12px 25px;
+    background-color: #454545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center;
+}
+
+.book_button:hover {
+    background-color: #333;
+}
+.our_patners{
+    width: 100%;
+}
+.our_pathers_text{
+    width: 100%;
+    display: flex;
+    font-size: 3rem;
+    font-weight: 600;
+    justify-content: center;
+}
+
+.patners{
+    width: 100%;
+    justify-content: space-around;
+    margin: 40px 0px;
+    display: flex;
+}
+
+.pathners img{
+    list-style-type:none;
+    width: 100px;
+}
+
+.footer {
+    background-color: #1A3C5C; /* Dark blue */
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.footer-left {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-left .logo {
+    width: 150px; /* Adjust logo size */
+    margin-bottom: 10px;
+}
+
+.footer-left address {
+    font-style: normal;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.footer-left a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-right {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-right h3 {
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.social-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.instagram {
+    background-color: #F7EACB; 
+}
+
+.facebook {
+    background-color: #A7BCD5;
+}
+
+.twitter {
+    background-color: #7697B5; 
+}
+
+.social-labels {
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-labels p {
+    margin: 0;
+    font-size: 14px;
+}
+.Facebook{
+    border: 2px solid red;
+    margin-left: -10px;
+}
