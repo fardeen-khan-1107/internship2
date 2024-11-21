@@ -3,7 +3,7 @@
     height: auto;
     margin: 0;
     padding: 0;
-    background-color: #EDE9CF;
+    background-color: #ABAAA8;
     font-family: Arial, sans-serif;
 }
 .header {
@@ -47,14 +47,14 @@
 }
 .book_now button {
     padding: 10px 15px; 
-    background-color: #4CAF50; 
+    background-color: #333334; 
     color: white; 
     border: none;
     border-radius: 5px;
     cursor: pointer; 
 }
 .book_now button:hover {
-    background-color: #45a049; 
+    background-color: #333334; 
 }
 .Hero_Section{
     height: auto;
@@ -79,7 +79,7 @@
     padding: 0px 20px;
     gap: 10px;
     border-radius: 20px;
-    background-color: #23384F;
+    background-color: #333334;
     color: white;
 }
 .hero_btn{
@@ -149,7 +149,7 @@
 .explore {
     display: inline-block;
     padding: 10px 15px;
-    background-color: #293949;
+    background-color: #333334;
     color: white;
     border-radius: 30px;
     text-decoration: none;
@@ -158,12 +158,9 @@
 }
 
 .explore:hover {
-    background-color: #1f2a35;
+    background-color: #333334;
 }
 
-.neurosurgeon {
-    /* border: 2px solid #3ba4d8; */
-}
 .product_section {
     display: flex;
     justify-content: space-between;
@@ -189,8 +186,6 @@
     margin-bottom: 20px;
 }
 
-
-
 .why_our_products h2{
     font-size: 19px;
 }
@@ -207,7 +202,7 @@
 .book_button {
     margin:30px 0px;
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #333334;
     border: none;
     color: white;
     font:bold;
@@ -237,7 +232,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #c5d9e3;
+    background-color: #969697;
     padding: 50px;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -272,7 +267,7 @@
 
 .message_button, .timetable_button {
     padding: 10px 20px;
-    background-color: #2b4452;
+    background-color: #333334;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -282,7 +277,7 @@
 }
 
 .message_button:hover, .timetable_button:hover {
-    background-color: #183138;
+    background-color: #333334;
 }
 
 .timetable_button span {
@@ -291,7 +286,6 @@
 
 
 .appointment_section {
-    background-color: #f1e8d8;
     padding: 50px;
     display: flex;
     justify-content: center;
@@ -301,7 +295,7 @@
     display: flex;
     width: 80%;
     max-width: 1200px;
-    background-color: #c5d9e3;
+    background-color: #333334;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -326,7 +320,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #a4d3d8;
+    background-color: #959597;
 }
 
 .appointment_form h2 {
@@ -353,7 +347,7 @@
     padding: 10px;
     border-radius: 5px;
     font-size: 14px;
-    outline-color: #2b4452;
+    outline-color: #333334;
     border: none;
 }
 
@@ -396,7 +390,7 @@
 }
 
 .footer {
-    background-color: #1A3C5C; /* Dark blue */
+    background-color: #323232; /* Dark blue */
     color: white;
     padding: 20px 0;
     display: flex;
@@ -454,7 +448,7 @@
     display: inline-block;
 }
 
-.instagram {
+/* .instagram {
     background-color: #F7EACB; 
 }
 
@@ -464,7 +458,7 @@
 
 .twitter {
     background-color: #7697B5; 
-}
+} */
 
 .social-labels {
     display: flex;
@@ -476,6 +470,5 @@
     font-size: 14px;
 }
 .Facebook{
-    border: 2px solid red;
     margin-left: -10px;
 }
